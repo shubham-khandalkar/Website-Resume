@@ -1,0 +1,88 @@
+
+#nav > ul {
+    margin: 0;
+    display:block;
+}
+
+#nav > ul > li {
+    position: relative;
+    display: inline-block;
+}
+
+#nav > ul > li div {
+    color: #c0c0c0;
+    text-decoration: none;
+    border: 0;
+    display: block;
+    padding:1.05em 0.5em;
+    cursor: pointer;
+}
+#nav > ul > li .active{
+    color: #ff0000;
+    text-decoration: none;
+    border: 0;
+    display: block;
+    padding:1.05em 0.5em;
+}
+#nav > ul > li:first-child {
+    margin-left: 0;
+}
+#nav > ul > li.present div {
+    color: #ff0000;
+}
+
+#nav > ul > li:hover div {
+    color: #f00;
+}
+
+#nav {
+    cursor: default;
+    background-color: #1B242F;
+    padding: 0;
+}
+
+#nav-toggle:after {
+    content:'';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #37c0fb;
+}
+#nav-toggle {
+    display:none;
+    background-color: #1B242F;
+    cursor: pointer;
+}
+#nav-toggle > .menu {
+    float:left;
+    color:#f00;
+    padding:10px;
+    width: 26px;
+}
+
+
+#nav-toggle > .menu > span {
+    width:26px;
+    height:3px;
+    background-color:#fff;
+    display:block;
+}
+#nav-toggle > .menu > span + span {
+    margin-top:4px;
+}
+.menu-caption {
+    display:inline-block;
+    color:#fff;
+    padding:10px;
+}
+@media screen and (max-width:767px) {
+    #nav-toggle {
+        display:block;
+    }
+    #nav > ul {
+        display:none;
+    }
+    #nav > ul > li {
+        display: block;
+    }
+}
