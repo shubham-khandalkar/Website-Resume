@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div class="overflow-wrap">
-      <canvas id="canvas" style=""></canvas>
-      <div class="main-content">
-        <div class="nav-bar">
-          <div id="nav-toggle">
-            <div class="menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <div class="menu-caption">Menu</div>
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="css/header-animation.css" rel="stylesheet">
+  <link href="css/navbar.css" rel="stylesheet">
+  <script src="js/index.js"></script>
+  <script src="js/inviewport.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/css-animation.js"></script>
+</head>
+<body>
+  <div class="overflow-wrap">
+    <canvas id="canvas" style=""></canvas>
+    <div class="main-content">
+      <div id="nav-bar" class="nav-bar">
+        <div id="nav-toggle">
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <div id="nav">
-            <ul>
-              <li>
-                <div href="#">Page 1</div>
-              </li>
-              <li class="present">
-                <div href="#">Page 2</div>
-              </li>
-              <li>
-                <div href="#">Page 3</div>
-              </li>
-              <li>
-                <div href="#">Page 4</div>
-              </li>
-            </ul>
-          </div>
+          <div class="menu-caption">Menu</div>
         </div>
-        <div class="contents-div">
-          <div class="project-div">
-            <div class="header trigger-animated">PROJECTS</div>
-            <div class="header-bar-parent">
-              <div class="header-bar trigger-animated"></div>
-            </div>
-            <div style='height:2000px;'></div>
-          </div>
-          <div class="about-div">
-            <div class="header trigger-animated">ABOUT</div>
-            <div class="header-bar-parent">
-              <div class="header-bar trigger-animated"></div>
-            </div>
-            <div style='height:2000px;'></div>
-          </div>
-        </div>      
+        <div id="nav">
+          <ul>
+            <li>
+              <div href="#">Page 1</div>
+            </li>
+            <li class="present">
+              <div href="#">Page 2</div>
+            </li>
+            <li>
+              <div href="#">Page 3</div>
+            </li>
+            <li>
+              <div href="#">Page 4</div>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div id="content-div" class="content-div">
+        <div class="project-div">
+          <div class="header trigger-animated">PROJECTS</div>
+          <div class="header-bar-parent">
+            <div class="header-bar trigger-animated"></div>
+          </div>
+          <div style='height:2000px;'></div>
+        </div>
+        <div class="about-div">
+          <div class="header trigger-animated">ABOUT</div>
+          <div class="header-bar-parent">
+            <div class="header-bar trigger-animated"></div>
+          </div>
+          <div style='height:2000px;'></div>
+        </div>
+      </div>      
     </div>
-  </body>
+  </div>
+</body>
 </html>
