@@ -86,3 +86,19 @@
         display: block;
     }
 }
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; 
+}
+.content-div{
+  padding-top:100px;
+}
+
+.sticky + .content-div {
+  z-index:10;
+  padding-top:150px;
+}
+
