@@ -17,3 +17,13 @@ canvas {
   overflow-x: hidden;
   padding: 0px;
 }
+
+.nav-bar
+{
+  z-index:20;
+}
+
+.content-div
+{
+  z-index: 10;
+}
