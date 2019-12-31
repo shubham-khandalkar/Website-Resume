@@ -9,8 +9,9 @@ $("#nav-toggle").click(function() {
 $(window).resize(function() {
   resetCanvas();
   windowWidth = $(window).width();
-  if (windowWidth > 767) {
-    if ($("#nav ul").is(":hidden")) {
+  if (windowWidth > 750) {
+    {
+      console.log("got here my man",windowWidth);
       $("#nav ul").css("display", "block");
       $("#nav-toggle").css("display", "none");
       $("#nav ul").removeClass("open");
@@ -21,34 +22,12 @@ $(window).resize(function() {
   }
 });
 
-$(function() {
-  var navPos = $(".nav-bar").position().top;
-  var lastPos = 0;
-  var isMobile;
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    isMobile = true;
-    // Mobile height fix
-    $(".height-fix").each(function() {
-      var h = $(this).height();
-      $(this).height(h);
-    });
-  }
+var navbar = document.getElementById("nav-bar");
+var sticky = navbar.offsetTop;
+window.onscroll = function() {if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }};
 
-  if (!isMobile) {
-    var pos = $(window).scrollTop();
-    var pos2 = pos + 50;
-    var scrollBottom = pos + $(window).height();
 
-    if (pos >= navPos + $("nav-bar").height() && lastPos < pos) {
-      $("nav-bar").addClass("fixed");
-    }
-    if (pos < navPos && lastPos > pos) {
-      $("nav-bar").removeClass("fixed");
-    }
-    lastPos = pos;
-  }
-});
