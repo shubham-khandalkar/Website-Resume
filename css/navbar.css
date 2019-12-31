@@ -14,7 +14,7 @@
     text-decoration: none;
     border: 0;
     display: block;
-    padding:1.05em 0.5em;
+    padding:16px 8px;
     cursor: pointer;
 }
 #nav > ul > li .active{
@@ -22,7 +22,7 @@
     text-decoration: none;
     border: 0;
     display: block;
-    padding:1.05em 0.5em;
+    padding:16px 8px;
 }
 #nav > ul > li:first-child {
     margin-left: 0;
@@ -86,7 +86,6 @@
         display: block;
     }
 }
-
 
 .sticky {
   position: fixed;
