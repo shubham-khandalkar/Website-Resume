@@ -27,3 +27,24 @@ canvas {
 {
   z-index: 10;
 }
+#home{
+	height: 100%;
+}
+/*
+.flex{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+*/
+.canvas-div{
+	z-index:40;
+	position:absolute;
+}
+
+#greeting{
+	position:absolute;
+	z-index:50;
+	transform: translate(0%, -150%)
+}
