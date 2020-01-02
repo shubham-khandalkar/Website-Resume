@@ -3,7 +3,7 @@ var canvas = document.getElementById("canvas");
 var home = document.getElementById("home");
 function resetCanvas() {
 	home.height = window.innerHeight; 
-   
+	home.style.height = window.innerHeight;
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	ctx = canvas.getContext("2d");
