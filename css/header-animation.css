@@ -13,14 +13,14 @@
   text-align:center!important;
 }
 
-.header.triggeredCSS3{
+.animate-right.triggeredCSS3{
   animation: animateright 0.3s;
   animation-delay: 0.5s;
 }
 
-.header-bar.triggeredCSS3 {
+.animate-left.triggeredCSS3 {
   animation: animateleft 0.4s;
-  animation-delay: 0.7s;
+  
 }
 
 .trigger-animated{
