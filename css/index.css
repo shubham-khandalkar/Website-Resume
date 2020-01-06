@@ -34,7 +34,7 @@ canvas {
 	width: 100%;
 }
 
-.flex{
+.all-center{
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -78,3 +78,51 @@ section{
 	padding: 0px;
 }
 
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar.fill{
+    margin:auto;
+    background-color: #00A1A7;
+    padding: 0;
+    opacity: 1;
+    transition: 1.1s 0.2s width ease-in-out;
+
+}
+
+.bar.empty{
+    margin: 20px auto;
+    background-color: #eee;
+    padding: 0;
+    opacity: 1;
+}
+
+.skill-percent{
+    display: block;
+    float: right;
+    padding: 5px 10px;    
+	font-family: 'Raleway-bold', sans-serif;
+    font-size: 12pt;
+    line-height: 12pt;
+	
+}
+
+.tag{
+    text-align:center;
+	font-size: 12pt;
+    line-height: 12pt;
+	color:white;
+    width: 70px;
+    background-color: #04C2C9;
+	font-family: 'Raleway-bold', sans-serif;
+    padding: 5px 10px;
+}
+
+.skills{
+    margin-top: 50px;
+}

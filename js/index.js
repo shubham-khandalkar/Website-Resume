@@ -17,17 +17,11 @@ resetCanvas();
 
 $('.page-link').click(function() {	
     var anchor = $(this).attr("dest");
-	var navbar = document.getElementById("nav-bar");		
 	$('.link-wrap').removeClass('visible');
 
     $('nav span').removeClass('active');
     $("nav").find('[dest="'+ anchor +'"]').addClass('active');
-	var navbar_offset = 0;
-	if(!navbar.classList.contains("sticky") && anchor == "about")
-	{	
-		navbar_offset = navbar.offsetHeight;
-		console.log(navbar_offset);
-	}
+	
     var scrollTo = $('#' + anchor).offset().top ;
 	$('html, body').animate({
       scrollTop:  scrollTo
