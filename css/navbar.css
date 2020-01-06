@@ -91,14 +91,15 @@
   position: fixed;
   top: 0;
   width: 100%; 
-  animation: popDown .5s;
+  animation: popDown 1s;
 }
 .content-div{
-  
+   padding-top:100px; 
 }
 
 .sticky + .content-div {
   z-index:10; 
+  padding-top:150px;
 }
 
 
