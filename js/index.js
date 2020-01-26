@@ -15,15 +15,22 @@ function resetCanvas() {
 
 resetCanvas();
 
-$('.page-link').click(function() {	
+$('.page-link').click(function() {
+	if($("#nav ul").hasClass("open"))
+	{
+		$("#nav ul").slideToggle();
+		$("#nav ul").toggleClass("open");
+	}
     var anchor = $(this).attr("dest");
 	$('.link-wrap').removeClass('visible');
 
     $('nav span').removeClass('active');
     $("nav").find('[dest="'+ anchor +'"]').addClass('active');
 	
-    var scrollTo = $('#' + anchor).offset().top ;
+    var scrollTo = $('#' + anchor).offset().top;
+	scrollTo -= 50;
 	$('html, body').animate({
       scrollTop:  scrollTo
     }, 400);
+	
   });

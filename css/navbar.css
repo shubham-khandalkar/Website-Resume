@@ -94,12 +94,12 @@
   animation: popDown 1s;
 }
 .content-div{
-   padding-top:100px; 
+   padding-top:0px; 
 }
 
 .sticky + .content-div {
   z-index:10; 
-  padding-top:150px;
+  padding-top:50px;
 }
 
 
