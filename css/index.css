@@ -169,6 +169,7 @@ section{
 	align-items: center;justify-content: center;
 	margin: 0px auto;
 	max-width: 1020px;
+	padding: 5px 50px;
 }
 img{ 
 	width: 100%; 
