@@ -17,18 +17,9 @@
     padding:16px 8px;
     cursor: pointer;
 }
-#nav > ul > li .active{
-    color: #ff0000;
-    text-decoration: none;
-    border: 0;
-    display: block;
-    padding:16px 8px;
-}
+
 #nav > ul > li:first-child {
     margin-left: 0;
-}
-#nav > ul > li.present div {
-    color: #ff0000;
 }
 
 #nav > ul > li:hover div {
@@ -40,6 +31,11 @@
     background-color: #1B242F;
     padding: 0;
 }
+
+#nav > ul > li > div.present{
+    color: #f00;
+}
+
 
 #nav-toggle:after {
     content:'';

@@ -71,7 +71,7 @@ canvas {
 }
 
 section{
-	padding: 0px 0px 50px 0px;
+	padding: 0px 0px 100px 0px;
 }
 
 #about{
@@ -174,4 +174,156 @@ img{
 	width: 100%; 
 	height: 100%; 
     object-fit: contain;
+}
+.modal-wrap{
+	height: 100vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+	align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	visibility: hidden;
+}
+
+.modal-wrap .mask {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+	opacity: 0;
+    top: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+}
+.modal-wrap.visible{
+	visibility:visible;
+}
+.modal-wrap.visible .mask {
+    opacity: 1;
+}
+
+.modal-wrap .modal {
+    align-items: flex-start;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    color: #333;
+    height: 100vh;
+    opacity: 0;
+    position: relative;
+    text-align: left;
+    transform: scale(0.8);
+    transition: all 0.3s;
+}
+.window {
+    background: #222;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel {
+    position: relative;
+    top: 0;
+    width: 10000px;
+}
+
+.slide {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    height: 450px;
+    justify-content: center;
+}
+.slide .carousel-wrap {
+    height: 450px;
+}
+
+.mdi {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.mdi-chevron-left, .mdi-chevron-right {
+    background: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    color: #fff;
+    cursor: pointer;
+    cursor: pointer;
+    font-size: 14pt !important;
+    font-weight: bold;
+    padding: 10px 15px;
+    position: absolute;
+}
+
+.mdi-chevron-left {
+    left: 0;
+}
+.mdi-chevron-right {
+    right: 0;
+}
+.mdi-chevron-left, .mdi-chevron-right {
+    font-size: 25pt !important;
+}
+.modal-wrap .info-box {
+    padding: 20px 60px 20px 25px;
+	background-color: white;
+}
+.modal-wrap .title {
+    font-size: 22pt;
+    line-height: 30pt;
+}
+
+.modal-wrap .modal-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #c0c0c0;
+    display: block;
+    font-size: 11pt;
+    font-weight: 300;
+    padding-bottom: 15px;
+}
+
+.modal-wrap .detail {
+    font-size: 11pt;
+    line-height: 18pt;
+    margin-top: 15px;
+}
+
+.modal-wrap .button {
+    background: #e31b6d;
+    border: 0;
+    bottom: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 10pt;
+    font-weight: 600;
+    pointer-events: none;
+    transition: all 0.5s;
+}
+.modal-wrap .close {
+	width:28px;
+	height:28px;
+    bottom: 25px;
+    color: #bbb;
+    cursor: pointer;
+    font-size: 20pt;
+    font-weight: 800;
+    position: absolute;
+    right: 25px;
+}
+
+.modal-wrap.visible .modal {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.transition {
+    transition: 0.7s;
 }
