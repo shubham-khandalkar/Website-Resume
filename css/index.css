@@ -129,7 +129,7 @@ section{
 }
 
 .skills{
-	min-width:600px;
+	min-width:400px;
 	margin-top: auto;
 	margin-bottom: auto;
 }
@@ -239,7 +239,7 @@ img{
     justify-content: center;
 }
 .slide .carousel-wrap {
-    height: 450px;
+    height: 400px;
 }
 
 .mdi {
@@ -419,7 +419,7 @@ img{
     margin: 3px auto;
     outline: none;
     padding: 10px 15px;
-    width: 500px;
+    width: 400px;
 }
 .message-box
 {

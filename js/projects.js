@@ -31,14 +31,13 @@ $(".card-project-button").click(function(){
 	
 	var slides = [];
 	details = pro_detail[this.id];
-	console.log(this.id);
 	if(this.id == "jems" || this.id == "ggitstouch" || this.id == "websiteresume")
 	{
 		console.log('inside');
 		$("#carousel").empty();
 		for(var i = 0; i < details['images'].length; i++)
 		{
-			$("#carousel").append('<div class="slide" style="width: 700px;"><img src=' + "'" + details['images'][i] + "'" + ')"></div>')
+			$("#carousel").append('<div class="slide" style="width: ' + modal_width + 'px;"><img src=' + "'" + details['images'][i] + "'" + ')"></div>')
 			console.log('looping');
 		}
 		$("#project-title").text(details['name']);
@@ -48,7 +47,7 @@ $(".card-project-button").click(function(){
 	}
 	$(".modal-wrap").addClass("visible");});
 var carousel = $('#carousel'),
-    slideWidth = 700,
+    slideWidth = modal_width,
     threshold = slideWidth / 3,
     dragStart,
     dragEnd;
@@ -87,6 +86,7 @@ var carousel = $('#carousel'),
       )
     ) {
       slideWidth = $(window).innerWidth();
+	  slideWidth = modal_width;
     }
     $('.carousel-wrap, .slide').css('width', slideWidth);
     $('.modal').css('max-width', slideWidth);
@@ -97,6 +97,7 @@ var carousel = $('#carousel'),
     return dragEnd - dragStart;
   }
 function shiftSlide(direction) {
+	slideWidth = modal_width;
 if (carousel.hasClass('transition')) return;
 dragEnd = dragStart;
 $(document).off('mouseup');
@@ -112,10 +113,9 @@ setTimeout(function() {
   }
   carousel.removeClass('transition');
   carousel.css('transform', 'translateX(0px)');
-}, 700);
+}, modal_width);
 }
 $('.card').hover(function(){
-	console.log(this);
 	$(this).find($(".card-hover")).addClass("visible");
 	
 },

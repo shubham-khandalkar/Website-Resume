@@ -1,6 +1,7 @@
 // initialization
 var canvas = document.getElementById("canvas");
 var home = document.getElementById("home");
+var modal_width = 700;
 function resetCanvas() {
 	home.height = window.innerHeight; 
 	home.style.height = window.innerHeight;
@@ -11,9 +12,17 @@ function resetCanvas() {
 	ctx.rect(0, 0, canvas.width, canvas.height);
 	ctx.fillStyle = "#252934";
 	ctx.fill();
+	modal_width = $(window).width() > 710 ? 700: 400;
+	$('#modal').css('width', modal_width + 'px');
+	$('#modal').css('max-width', modal_width + 'px');
+	$('.slide').css('width', modal_width + 'px');
+	$('#carousel').css('left', '-' + modal_width + 'px');
+	$('.carousel-wrap').css('width', modal_width + 'px');
 }
 
 resetCanvas();
+
+
 
 $('.page-link').click(function() {
 	if($("#nav ul").hasClass("open"))
@@ -34,3 +43,4 @@ $('.page-link').click(function() {
     }, 400);
 	
   });
+ 

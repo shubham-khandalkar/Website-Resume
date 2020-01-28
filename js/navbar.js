@@ -11,7 +11,6 @@ $(window).resize(function() {
   windowWidth = $(window).width();
   if (windowWidth > 750) {
     {
-      console.log("got here my man",windowWidth);
       $("#nav ul").css("display", "block");
       $("#nav-toggle").css("display", "none");
       $("#nav ul").removeClass("open");
