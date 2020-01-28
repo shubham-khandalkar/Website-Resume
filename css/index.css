@@ -160,15 +160,16 @@ section{
 	margin-top: 20px;
 }
 .card{
-	width: 340px;
-	height: 300px;
+	width: 400px;
+	height: 350px;
 	background-color: #fff;
+	position: relative;
 }
 .card-handler{
 	display: flex; flex-wrap: wrap;
 	align-items: center;justify-content: center;
 	margin: 0px auto;
-	max-width: 1020px;
+	max-width: 1200px;
 	padding: 5px 50px;
 }
 img{ 
@@ -211,7 +212,6 @@ img{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     color: #333;
-    height: 100vh;
     opacity: 0;
     position: relative;
     text-align: left;
@@ -327,4 +327,143 @@ img{
 
 .transition {
     transition: 0.7s;
+}
+.project-card-mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #eee;
+}
+.card-project{
+	position: absolute;
+    top: 0px;
+    text-align: center;
+    width: 100%;
+	opacity: 0.0;
+	transition: all 1s ease-in-out;
+}
+.card-project-name{
+	font-size: 16pt;
+	font-weight: bold;
+}
+.card-project-tech{
+	color: #e31b6d;
+	margin-top: 20px;
+}
+.card-project-button
+{
+	position: absolute;
+	bottom: 0px;
+	margin: 0px auto;
+	border-color: #e31b6d;
+	color: black;
+}
+
+.card-project.visible{
+	top: 70px;
+}
+.card-project-button.visible{
+	bottom: 50px;
+}
+
+.card-hover 
+{
+	opacity: 0.0;
+	transition: all 0.3s ease-in-out;
+}
+
+.card-hover.visible{
+	opacity: 1.0;
+}
+.project-card-mask.card-hover.visibile{
+	opacity: 1.0;
+	transition: opacity 0.3s;
+}
+
+.github-button
+{
+	color: #24292e;
+	border-color: #24292e;
+	transition: all 0.4s ease-in-out;
+}
+.github-button:hover{
+	background-color: #24292e;
+	color: white;
+}
+.codepen-button{
+	color: #0d80aa;
+	border-color: #0d80aa;
+	transition: all 0.4s ease-in-out;
+}
+.codepen-button:hover{
+	background-color: #0d80aa;
+	color: white;
+}
+#contact{
+	background-color: #252934;
+}
+.contact-header-bar.header-bar{
+	background: white;
+	
+}
+.message-input{
+	background-color: #1e242c;
+	border: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: block;
+    font-size: 12pt;
+    margin: 3px auto;
+    outline: none;
+    padding: 10px 15px;
+    width: 500px;
+}
+.message-box
+{
+	height: 150px;
+	vertical-align: top;
+}
+#submit.button{
+	background-color:#252934;
+}
+#submit.button:hover{
+	background-color:#04c2c9;
+	border-color: #04c2c9;
+}
+footer{
+	background-color: #1b242f;
+}
+#footer-home{
+	width: 50px; 
+	height: 50px; 
+	background: #e31b6d; 
+	cursor: pointer;
+	position: absolute;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px;
+}
+.copier{
+	color:#0441c9;
+}
+
+#success>div{
+	display: inline-block;
+	background-color: #04c986;
+	color: #157051;
+	width: 500px;
+	height: 26px;
+	padding-top: 4px;
+}
+
+#success{
+	height: 0px;
+	overflow: hidden;
+	transition: height 0.2s ease-in-out;
+}
+#success.visible{
+	height: 26px;
 }
