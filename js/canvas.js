@@ -26,6 +26,7 @@ function Point(x, y) {
   this.ang = Math.atan2(this.y - canvas.height / 2, this.x - canvas.width / 2);
   this.color = colors[Math.floor(Math.random() * 3)];
   //Controls the opacity/brightness of the rays
+  
   this.getOpac = function(linex, liney) {
     if (mouse.x == undefined) return (50).toString(16);
     var mx = linex - mouse.x;
@@ -62,7 +63,7 @@ function Point(x, y) {
 
 var points = [];
 for (var i = 0; i < points_count; i++) {
-  var rad = Math.floor(Math.random() * points_spread) * (canvas.width / (2 * points_spread));
+  var rad = Math.floor(Math.random() * points_spread) * (Math.max(canvas.width, canvas.height) / (2 * points_spread));
   var ang = Math.random() * Math.PI * 2;
   var x = canvas.width/2 + rad * Math.cos(ang);
   var y = canvas.height/2 +  rad * Math.sin(ang);
