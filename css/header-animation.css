@@ -14,21 +14,28 @@
 }
 
 .animate-right.triggeredCSS3{
-  animation: animateright 0.3s;
-  animation-delay: 0.5s;
+  animation: animateright 0.3s forwards;
 }
 
 .animate-left.triggeredCSS3 {
-  animation: animateleft 0.4s;
+  animation: animateleft 0.4s forwards;;
   
+}
+
+.animate-up.triggeredCSS3{
+  animation: animateup 0.3s forwards;
+}
+
+.animate-down.triggeredCSS3{
+  animation: animatedown 0.3s forwards;
 }
 
 .trigger-animated{
   visibility:hidden;
 }
 
-.bar.fill.triggeredCSS3 {
-    
+.bar.fill.trigger-animated {
+	width: 20%;
 }
 
 
@@ -40,6 +47,13 @@
   display: inline-block;
 }
 
+.trigger-animated.animate-expand.triggeredCSS3{
+	animation: animateexpand 2s ease-in-out forwards;
+	animation-delay: 1.2s
+}
 
-@keyframes animateright{from{right:-300px;opacity:0;visibility:hidden} to{right:0;opacity:1;visibility:visible}}
-@keyframes animateleft{from{left:-300px;opacity:0;visibility:hidden} to{left:0;opacity:1;visibility:visible}}
+@keyframes animateexpand{from {width:20%; visibility:hidden;} to{width:100%;visibility:visible;}}
+@keyframes animateright{from{transform: translate(300px, 0px);opacity:0;visibility:hidden} to{transform: translate(0px, 0px);opacity:1;visibility:visible}}
+@keyframes animateleft{from{transform: translate(-300px, 0px);opacity:0;visibility:hidden} to{transform: translate(0px, 0px);opacity:1;visibility:visible}}
+@keyframes animateup{from{transform: translate(0px, 300px);opacity:0;visibility:hidden} to{transform: translate(0px, 0px);opacity:1;visibility:visible}}
+@keyframes animatedown{from{transform: translate(0px, -300px);opacity:0;visibility:hidden} to{transform: translate(0px, 0px);opacity:1;visibility:visible}}

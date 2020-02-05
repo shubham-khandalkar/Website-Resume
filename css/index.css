@@ -97,6 +97,7 @@ section{
     opacity: 1;
     transition: 1.1s 0.2s width ease-in-out;
 	display:inline-block;
+	height: 26px;
 }
 
 .bar.empty{
@@ -105,6 +106,8 @@ section{
     background-color: #eee;
     padding: 0;
     opacity: 1;
+	height: 26px;
+	position: relative;
 }
 
 .skill-percent{
@@ -126,6 +129,7 @@ section{
     background-color: #04C2C9;
 	font-family: 'Raleway-bold', sans-serif;
     padding: 5px 10px;
+	position: absolute; top: 0px;
 }
 
 .skills{
